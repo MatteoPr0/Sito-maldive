@@ -1,5 +1,5 @@
 const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(
+const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -7,40 +7,41 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.15 }
+  { threshold: 0.12 }
 );
 
-reveals.forEach((item) => observer.observe(item));
+reveals.forEach((item) => revealObserver.observe(item));
 
-const metricNodes = document.querySelectorAll('.metric');
-let metricsAnimated = false;
+const tiltCards = document.querySelectorAll('.tilt-card');
 
-const animateMetric = (node) => {
-  const target = Number(node.dataset.target || 0);
-  const duration = 1200;
-  const startAt = performance.now();
+const setTilt = (card, x, y) => {
+  const rect = card.getBoundingClientRect();
+  const dx = (x - rect.left) / rect.width - 0.5;
+  const dy = (y - rect.top) / rect.height - 0.5;
+  const tiltX = dy * -10;
+  const tiltY = dx * 12;
 
-  const loop = (now) => {
-    const progress = Math.min((now - startAt) / duration, 1);
-    const value = Math.floor(progress * target);
-    node.textContent = value;
-    if (progress < 1) requestAnimationFrame(loop);
-  };
-
-  requestAnimationFrame(loop);
+  card.style.transform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
 };
 
-const hero = document.querySelector('.hero');
-const heroObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && !metricsAnimated) {
-        metricsAnimated = true;
-        metricNodes.forEach(animateMetric);
-      }
-    });
-  },
-  { threshold: 0.45 }
-);
+tiltCards.forEach((card) => {
+  card.addEventListener('mousemove', (event) => setTilt(card, event.clientX, event.clientY));
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)';
+  });
 
-if (hero) heroObserver.observe(hero);
+  card.addEventListener('touchstart', () => {
+    card.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) scale(1.02)';
+  }, { passive: true });
+
+  card.addEventListener('touchend', () => {
+    card.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)';
+  }, { passive: true });
+});
+
+const hero = document.querySelector('.hero');
+window.addEventListener('scroll', () => {
+  if (!hero) return;
+  const offset = window.scrollY * 0.15;
+  hero.style.backgroundPositionY = `${offset}px`;
+});

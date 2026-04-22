@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maldivian Dreamscape • Viaggio alle Maldive</title>
+    <title>Maldive Escape • Piano viaggio</title>
     <meta
       name="description"
-      content="Una landing page futuristica e interattiva per presentare una vacanza da sogno alle Maldive."
+      content="Landing page premium per un itinerario di 12 giorni alle Maldive, con design moderno e animazioni eleganti."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,136 +17,144 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="aurora aurora--one"></div>
-    <div class="aurora aurora--two"></div>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+    <div class="bg-grid"></div>
 
     <header class="site-header" id="top">
-      <a class="brand" href="#top">Maldivian Dreamscape</a>
+      <a class="brand" href="#top">Maldive Escape</a>
       <nav class="nav-links">
         <a href="#overview">Overview</a>
-        <a href="#experience">Esperienze</a>
-        <a href="#itinerary">Itinerario</a>
-        <a href="#stay">Soggiorno</a>
+        <a href="#itinerario">Itinerario</a>
+        <a href="#esperienze">Esperienze</a>
+        <a href="#soggiorno">Soggiorno</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn--outline" href="#cta">Pianifica</a>
+      <a class="btn btn-outline" href="#cta">Pianifica</a>
     </header>
 
     <main>
-      <section class="hero" id="overview">
+      <section class="hero reveal" id="overview">
         <img
           class="hero-bg"
-          src="https://images.unsplash.com/photo-1589979481223-deb893043163?auto=format&fit=crop&w=2000&q=80"
-          alt="Spiaggia tropicale alle Maldive"
+          src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=2200&q=80"
+          alt="Laguna tropicale alle Maldive"
         />
         <div class="hero-overlay"></div>
-        <div class="hero-content reveal">
-          <p class="eyebrow">South Ari Atoll • Hangnaameedhoo</p>
-          <h1>12 giorni alle Maldive, in versione wow.</h1>
-          <p>
-            Un viaggio pensato per stupire: acque turchesi, escursioni iconiche,
-            tramonti infiniti e ritmo tropicale.
+
+        <div class="hero-content">
+          <h1>12 giorni alle Maldive</h1>
+          <p class="hero-subtitle">Ocean Lily Inn • Hangnaameedhoo • South Ari Atoll</p>
+          <p class="hero-copy">
+            Un soggiorno stanziale tra house reef, sandbank, whale shark tour e ritmo lento da isola vera.
           </p>
           <div class="hero-actions">
-            <a class="btn btn--solid" href="#itinerary">Esplora il viaggio</a>
-            <a class="btn btn--ghost" href="#experience">Scopri le esperienze</a>
-          </div>
-          <div class="hero-metrics">
-            <article>
-              <span class="metric" data-target="12">0</span>
-              <p>giorni di viaggio</p>
-            </article>
-            <article>
-              <span class="metric" data-target="6">0</span>
-              <p>esperienze top</p>
-            </article>
-            <article>
-              <span class="metric" data-target="1">0</span>
-              <p>obiettivo: wow ❤️</p>
-            </article>
+            <a class="btn btn-solid" href="#itinerario">Esplora il viaggio</a>
+            <a class="btn btn-ghost" href="#esperienze">Scopri le attività</a>
           </div>
         </div>
       </section>
 
       <section class="intro reveal">
-        <h2>Una fuga romantica, modernissima e perfetta da condividere.</h2>
-        <p>
-          Questa proposta nasce dalle tue reference e la porta a un livello
-          premium: look futuristico, micro-animazioni, effetti glass e layout
-          totalmente responsive per mobile e desktop.
-        </p>
-      </section>
-
-      <section id="experience" class="cards-section reveal">
-        <div class="section-head">
-          <h3>Esperienze da non perdere</h3>
-          <a href="#cta">Vedi tutto →</a>
-        </div>
-        <div class="cards-grid">
-          <article class="experience-card">
-            <img src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=900&q=80" alt="Whale shark" />
-            <div class="card-gradient"></div>
-            <h4>Whale Shark Tour</h4>
-          </article>
-          <article class="experience-card">
-            <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=900&q=80" alt="Manta snorkeling" />
-            <div class="card-gradient"></div>
-            <h4>Manta & Snorkeling</h4>
-          </article>
-          <article class="experience-card">
-            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=80" alt="Sandbank" />
-            <div class="card-gradient"></div>
-            <h4>Sandbank Picnic</h4>
-          </article>
-          <article class="experience-card">
-            <img src="https://images.unsplash.com/photo-1579033385971-a7bcf6bd6c4d?auto=format&fit=crop&w=900&q=80" alt="Sunset" />
-            <div class="card-gradient"></div>
-            <h4>Sunset Fishing</h4>
-          </article>
-          <article class="experience-card">
-            <img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=900&q=80" alt="Diving" />
-            <div class="card-gradient"></div>
-            <h4>Diving Session</h4>
-          </article>
-          <article class="experience-card">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Beach relax" />
-            <div class="card-gradient"></div>
-            <h4>Relax in Bikini Beach</h4>
-          </article>
-        </div>
-      </section>
-
-      <section id="itinerary" class="itinerary reveal">
-        <h3>Itinerario in breve</h3>
-        <div class="timeline">
-          <article><span>Giorno 1</span><h4>Arrivo a Malé</h4><p>Accoglienza e transfer verso l'isola.</p></article>
-          <article><span>Giorni 2–4</span><h4>Mare & reef</h4><p>Snorkeling, house reef e lagune trasparenti.</p></article>
-          <article><span>Giorni 5–6</span><h4>Escursioni iconiche</h4><p>Whale shark, manta e sandbank day.</p></article>
-          <article><span>Giorni 7–9</span><h4>Ritmo lento</h4><p>Relax, sunset e atmosfera locale.</p></article>
-          <article><span>Giorni 10–11</span><h4>Finale perfetto</h4><p>Attività su misura e cena romantica.</p></article>
-          <article><span>Giorno 12</span><h4>Rientro</h4><p>Trasferimento e volo di ritorno.</p></article>
-        </div>
-      </section>
-
-      <section id="stay" class="stay reveal">
-        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80" alt="Guesthouse alle Maldive" />
         <article>
-          <p class="eyebrow">Ocean Lily Inn • South Ari Atoll</p>
-          <h3>Il soggiorno: autentico, elegante, fronte oceano.</h3>
-          <ul>
-            <li>Beachfront guesthouse curata</li>
-            <li>Camere comode e stile tropical chic</li>
-            <li>Escursioni organizzate giorno per giorno</li>
-            <li>Perfetto mix tra avventura e relax</li>
-          </ul>
+          <h2>Una vacanza semplice, bellissima, ben pensata.</h2>
+          <span class="intro-line"></span>
+        </article>
+        <article>
+          <p>
+            Alle Maldive, nel cuore del South Ari Atoll, ti aspetta Hangnaameedhoo: un’isola locale autentica,
+            circondata da un mare cristallino e una laguna ricca di vita.
+          </p>
+          <p>
+            Soggiornerai all’Ocean Lily Inn, una guesthouse fronte mare accogliente e curata, con escursioni
+            selezionate per vivere il meglio dell’atollo senza rinunciare al relax.
+          </p>
         </article>
       </section>
 
+      <section id="esperienze" class="reveal">
+        <div class="section-head">
+          <h3>Esperienze da non perdere</h3>
+          <a href="#cta">Scopri tutte le esperienze →</a>
+        </div>
+
+        <div class="cards-grid">
+          <article class="experience-card tilt-card">
+            <img src="https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=900&q=80" alt="Whale Shark Tour" />
+            <div class="card-gradient"></div>
+            <h4>Whale Shark Tour</h4>
+          </article>
+          <article class="experience-card tilt-card">
+            <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=900&q=80" alt="Manta & Snorkeling" />
+            <div class="card-gradient"></div>
+            <h4>Manta & Snorkeling</h4>
+          </article>
+          <article class="experience-card tilt-card">
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80" alt="Sandbank Picnic" />
+            <div class="card-gradient"></div>
+            <h4>Sandbank Picnic</h4>
+          </article>
+          <article class="experience-card tilt-card">
+            <img src="https://images.unsplash.com/photo-1579033385971-a7bcf6bd6c4d?auto=format&fit=crop&w=900&q=80" alt="Sunset Fishing" />
+            <div class="card-gradient"></div>
+            <h4>Sunset Fishing</h4>
+          </article>
+          <article class="experience-card tilt-card">
+            <img src="https://images.unsplash.com/photo-1682687982501-1e58ab814714?auto=format&fit=crop&w=900&q=80" alt="Diving" />
+            <div class="card-gradient"></div>
+            <h4>Diving</h4>
+          </article>
+          <article class="experience-card tilt-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Relax in bikini beach" />
+            <div class="card-gradient"></div>
+            <h4>Relax in bikini beach</h4>
+          </article>
+        </div>
+      </section>
+
+      <section id="itinerario" class="reveal">
+        <h3>Itinerario in breve</h3>
+        <div class="timeline">
+          <article><span>✈</span><p>Giorno 1</p><h4>Arrivo a Malé</h4><small>Accoglienza e trasferimento verso l’isola.</small></article>
+          <article><span>≋</span><p>Giorni 2–4</p><h4>Mare & reef</h4><small>Snorkeling, relax e scoperta del house reef.</small></article>
+          <article><span>◉</span><p>Giorni 5–6</p><h4>Escursioni iconiche</h4><small>Whale shark tour, manta e sandbank picnic.</small></article>
+          <article><span>☘</span><p>Giorni 7–9</p><h4>Ritmo lento</h4><small>Tempo per te, mare, sole e vita locale.</small></article>
+          <article><span>☆</span><p>Giorni 10–11</p><h4>Esperienze finali</h4><small>Attività su misura e ultimi tramonti.</small></article>
+          <article><span>✈</span><p>Giorno 12</p><h4>Rientro</h4><small>Trasferimento a Malé e volo di ritorno.</small></article>
+        </div>
+      </section>
+
+      <section id="soggiorno" class="stay reveal">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80" alt="Ocean Lily Inn" />
+        <article>
+          <h3>Ocean Lily Inn</h3>
+          <p class="stay-location">Hangnaameedhoo, South Ari Atoll</p>
+          <ul>
+            <li>Beachfront guesthouse</li>
+            <li>Camere semplici e curate</li>
+            <li>Escursioni organizzate</li>
+            <li>Atmosfera locale autentica</li>
+          </ul>
+        </article>
+        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1400&q=80" alt="Camera Ocean Lily Inn" />
+      </section>
+
+      <section class="route reveal">
+        <h3>Da Milano alle Maldive</h3>
+        <div class="route-grid">
+          <article><strong>1</strong><div><h4>Malpensa (MXP)</h4><p>Volo internazionale</p></div></article>
+          <article><strong>2</strong><div><h4>Malé (MLE)</h4><p>Arrivo e accoglienza</p></div></article>
+          <article><strong>3</strong><div><h4>Trasferimento</h4><p>Speedboat o domestic transfer</p></div></article>
+          <article><strong>4</strong><div><h4>Hangnaameedhoo</h4><p>Soggiorno sull’isola</p></div></article>
+        </div>
+      </section>
+
       <section class="cta reveal" id="cta">
-        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=2000&q=80" alt="Tramonto maldiviano" />
+        <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=2200&q=80" alt="Sunset alle Maldive" />
         <div>
-          <h3>Pronta a partire?</h3>
-          <p>Costruiamo insieme il nostro viaggio perfetto alle Maldive ✨</p>
-          <a class="btn btn--solid" href="#top">Apri il piano completo</a>
+          <h3>Pronto a partire?</h3>
+          <p>Costruiamo insieme la tua fuga perfetta alle Maldive.</p>
+          <a class="btn btn-solid" href="#top">Apri il piano completo</a>
         </div>
       </section>
     </main>
