@@ -20,16 +20,15 @@ body {
 
 .shell {
   width: min(1480px, 98vw);
-  margin: 1rem auto;
-  border: 1px solid #cfd3db;
-  border-radius: 22px;
-  background: #f7f8fb;
-  padding: 0.8rem;
+  margin: 1.5rem auto;
+  border-radius: 32px;
+  background: #ffffff;
+  padding: 1rem;
 }
 
 .topbar {
   position: absolute;
-  inset: 0 0 auto 0;
+  inset: 1rem 1rem auto 1rem;
   height: 88px;
   z-index: 5;
   display: flex;
@@ -37,6 +36,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   padding: 0 2.2rem;
+  background: transparent;
 }
 
 .brand {
@@ -82,9 +82,9 @@ body {
 }
 
 .btn-outline {
-  border: 1.5px solid #67aebe;
-  color: #197d95;
-  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  background: transparent;
 }
 
 .btn-solid {
@@ -99,9 +99,12 @@ body {
 
 .hero {
   position: relative;
-  border-radius: 0;
+  border-radius: 24px;
   overflow: hidden;
-  min-height: 560px;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hero img {
@@ -122,8 +125,8 @@ body {
   position: relative;
   z-index: 1;
   color: #fff;
-  max-width: 520px;
-  padding: 10rem 3rem 3rem;
+  max-width: 600px;
+  padding: 0 3rem 4rem;
 }
 
 h1,
@@ -159,18 +162,18 @@ h1 {
 }
 
 section {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  margin-top: 1rem;
-  padding: 1.4rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  margin-top: 3rem;
+  padding: 2rem 3rem;
 }
 
 .intro {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  align-items: start;
-  gap: 2.4rem;
+  align-items: center;
+  gap: 4rem;
 }
 
 .intro h2 {
@@ -223,6 +226,14 @@ section {
   position: relative;
 }
 
+.cards article::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+  pointer-events: none;
+}
+
 .cards img {
   width: 100%;
   height: 100%;
@@ -231,11 +242,11 @@ section {
 
 .cards h4 {
   position: absolute;
+  z-index: 1;
   left: 0.8rem;
   bottom: 0.8rem;
   color: #fff;
   font-size: 1.6rem;
-  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.45);
 }
 
 .itinerary {
@@ -265,8 +276,8 @@ section {
 .stay-grid {
   margin-top: 0.7rem;
   display: grid;
-  grid-template-columns: 1fr 0.9fr 1fr;
-  gap: 0.9rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
   align-items: stretch;
 }
 
@@ -376,16 +387,16 @@ section {
   }
 
   .topbar {
-    position: sticky;
+    position: absolute;
     inset: 0 0 auto 0;
     height: auto;
-    padding: 0.9rem 1rem;
-    background: #fff;
-    border-bottom: 1px solid var(--line);
+    padding: 0.9rem 1.2rem;
+    background: transparent;
+    border-bottom: none;
   }
 
   .brand {
-    color: var(--text);
+    color: #fff;
     font-size: clamp(1.7rem, 7vw, 2.3rem);
   }
 
@@ -412,17 +423,18 @@ section {
 
   .menu-btn {
     display: block;
+    color: #fff;
   }
 
   .hero {
     border-radius: 0;
-    min-height: 485px;
+    min-height: 100vh;
     margin-top: 0;
   }
 
   .hero-copy {
-    max-width: 330px;
-    padding: 2.2rem 1.2rem 1.4rem;
+    max-width: 100%;
+    padding: 0 1.2rem 2rem;
   }
 
   h1 {
@@ -443,8 +455,13 @@ section {
 
   .hero-cta {
     flex-direction: column;
-    max-width: 320px;
-    margin-top: 1rem;
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    text-align: center;
   }
 
   .intro {
@@ -462,17 +479,21 @@ section {
 
   .cards {
     display: flex;
-    overflow: auto;
+    overflow-x: auto;
     gap: 0.6rem;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
   }
 
   .cards article {
-    min-width: 180px;
-    min-height: 200px;
+    min-width: 200px;
+    min-height: 220px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
   }
 
   .itinerary {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .stay-grid {
